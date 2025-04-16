@@ -115,9 +115,9 @@ install_accelergy:
 install_timeloop:
 	mkdir -p /tmp/build-timeloop
 
-	sudo apt-get update \
-		&& sudo DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata \
-		&& sudo apt-get install -y --no-install-recommends \
+	apt-get update \
+		&&  DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata \
+		&& apt-get install -y --no-install-recommends \
 						locales \
 						curl \
 						git \
@@ -130,12 +130,12 @@ install_timeloop:
 						autoconf \
 						automake \
 						libtool \
-		&& sudo apt-get install -y --no-install-recommends \
+		&& apt-get install -y --no-install-recommends \
 						g++ \
 						cmake
 
-	sudo apt-get update \
-		&& sudo apt-get install -y --no-install-recommends \
+	apt-get update \
+		&& apt-get install -y --no-install-recommends \
 						g++ \
 						libconfig++-dev \
 						libboost-dev \
